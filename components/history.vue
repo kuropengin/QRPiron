@@ -46,13 +46,13 @@
                         const time = onedata.stamp.split(" ");
                         if(time[0] in resultDict){
                             resultDict[time[0]].push({
-                                "arg" : onedata.arg,
+                                "arg" : "*" .repeat(onedata.arg.slice(0,onedata.arg.length/2).length) + onedata.arg.slice(onedata.arg.length/2),
                                 "stamp" : onedata.stamp,
                             })
                         }
                         else{
                             resultDict[time[0]] = [{
-                                "arg" : onedata.arg,
+                                "arg" : "*" .repeat(onedata.arg.slice(0,onedata.arg.length/2).length) + onedata.arg.slice(onedata.arg.length/2),
                                 "stamp" : onedata.stamp,
                             }]
                         }
